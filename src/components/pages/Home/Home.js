@@ -1,7 +1,9 @@
+import RenderPosts from "../../features/RenderPosts/RenderPosts";
+
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <RenderPosts />
         </div>
     );
 };
