@@ -19,7 +19,7 @@ const RenderPosts = () => {
         </Row>
         <Row className=" my-4 d-flex">
           {posts.map(post => 
-            <Col className="border p-3 m-2 col-12 col-lg-3  flex-grow-1" 
+            <Col className="border p-3 m-2 col-12 col-lg-3 flex-grow-1" 
               key={post.id}>
               <h4>{post.title}</h4>
               <p className="m-0"><span className="fw-bold">Author:</span> {post.author}</p>
