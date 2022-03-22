@@ -15,8 +15,6 @@ const SinglePost = () => {
   const singlePost = useSelector(state => getPostById(state, postId));
   const [show, setShow] = useState(false);
 
-  console.log(postId);
-
   const handleShow = e => {
     e.preventDefault();
     setShow(true);
