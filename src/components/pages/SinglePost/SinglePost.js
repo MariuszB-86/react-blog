@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { removePost } from '../../../redux/postRedux';
 import { Navigate } from 'react-router-dom';
+import { dateToStr } from '../../../utils/dateToStr';
 
 const SinglePost = () => {
 
@@ -43,8 +44,8 @@ const SinglePost = () => {
             </div>
           </div>
           <p className="m-0"><span className="fw-bold">Author:</span> {singlePost.author}</p>
-          <p><span className="fw-bold">Published:</span> {singlePost.publishedDate}</p>
-          <p>{singlePost.content}</p> 
+          <p><span className="fw-bold">Published:</span> {dateToStr(singlePost.publishedDate)}</p>
+          <p dangerouslySetInnerHTML={{ __html: singlePost.content }} /> 
         </Col>
       </Row>
       <Modal show={show} > 
