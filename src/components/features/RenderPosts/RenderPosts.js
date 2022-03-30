@@ -24,7 +24,8 @@ const RenderPosts = () => {
               key={post.id}>
               <h4>{post.title}</h4>
               <p className="m-0"><span className="fw-bold">Author:</span> {post.author}</p>
-              <p><span className="fw-bold">Published:</span> {dateToStr(post.publishedDate)}</p>
+              <p className="m-0"><span className="fw-bold">Published:</span> {dateToStr(post.publishedDate)}</p>
+              <p><span className="fw-bold">Category:</span> {post.category}</p>
               <p>{post.shortDescription}</p>
               <Link to={`/post/${post.id}`}>
                 <Button variant="primary">Read more</Button>

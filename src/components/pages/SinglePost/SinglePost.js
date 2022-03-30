@@ -44,7 +44,8 @@ const SinglePost = () => {
             </div>
           </div>
           <p className="m-0"><span className="fw-bold">Author:</span> {singlePost.author}</p>
-          <p><span className="fw-bold">Published:</span> {dateToStr(singlePost.publishedDate)}</p>
+          <p className="m-0"><span className="fw-bold">Published:</span> {dateToStr(singlePost.publishedDate)}</p>
+          <p><span className="fw-bold">Category:</span> {singlePost.category}</p>
           <p dangerouslySetInnerHTML={{ __html: singlePost.content }} /> 
         </Col>
       </Row>
